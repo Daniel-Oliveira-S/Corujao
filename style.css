@@ -506,15 +506,15 @@ gap: 4rem;
   }
 
   .slide.first{
-    margin-left:-1.4rem;
+    margin-left:-.25rem;
   }
   
   .slide.second{
-    margin-left:-1.9rem ;
+    margin-left:-2.5rem ;
   }
   
   .slide.third{
-    margin-left: -1.7rem ;
+    margin-left: -2rem ;
   }
 
   .slide h2{
