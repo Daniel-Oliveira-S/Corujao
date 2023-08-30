@@ -437,7 +437,7 @@ scroll-margin-top:5rem ;
   display: flex;
   transition: transform 0.5s ease-in-out;
 width: 100%;
-margin: 0 22rem;
+margin: 2rem 22rem;
 gap: 4rem;
 }
 
@@ -454,16 +454,16 @@ gap: 4rem;
 .slide h2{
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-top: 1rem;
   color: #000;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .slide p{
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #000;
   width: 100%;
   line-height: 27px;
