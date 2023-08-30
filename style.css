@@ -1,0 +1,1356 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor de fundo da área da barra de rolagem */
+  border-radius: 8px; /* Borda arredondada da área da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fa5a03; /* Cor do "polegar" da barra de rolagem */
+  border-radius: 8px; /* Borda arredondada do "polegar" */
+}
+
+body{
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+#header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  width: 100%;
+  padding: 1rem 0;
+
+  position: fixed;
+  background: #fff;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+#nav #menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+#nav #menu li{
+  list-style: none;
+}
+
+#nav #menu a{
+  text-decoration: none;
+  color: #4c0953;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+#nav #menu a:hover{
+  color: #fa5a03;
+}
+
+#nav .play a{
+  background: #5d9c77;
+  padding: .90rem 4.25rem;
+  border-radius: 100px;
+  
+  text-decoration: none;
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+
+  transition: all 0.3s ease-in-out;
+  
+}
+
+#nav .play a:hover{
+  background: #7c2399;
+}
+
+/* Section Play */
+
+#play{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url(./Assets/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 6.5rem;
+  height: 100vh;
+  
+}
+
+#play #tc-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  margin-left: 22rem;
+}
+
+#play #tc-1 h2{
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2rem;
+  margin-top: 9rem;
+  width: 38%;
+}
+
+#play #tc-1 p{
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 5rem;
+  word-wrap: break-word;
+  width: 35% ;
+}
+
+#play .play a{
+  background: #5d9c77;
+  padding: .90rem 4.25rem;
+  border-radius: 100px;
+  text-align: center;
+  text-decoration: none;
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+
+  transition: all 0.3s ease-in-out;
+  
+}
+
+#play .play a:hover{
+  background: #fa5a03;
+}
+
+/* Section Metodologia */
+
+#Metodologia{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#Metodologia .puzzle-btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Metodologia .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 22rem;
+margin-top: 6rem;
+
+}
+
+
+#Metodologia h2{
+margin-bottom: 2rem;
+font-family: "ROBOTO", sans-serif;
+font-size: 2.5rem;
+font-weight: 700;
+width: 60%;
+}
+
+#Metodologia .text p{
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem;
+  width: 59% ;
+  font-weight: 400;
+  line-height: 27px
+;
+}
+
+#Metodologia .play{
+  margin-top: 2rem;
+}
+
+#Metodologia .play{
+  background: none;
+  border: 1px solid #5d9c77;
+  padding: .90rem 4.25rem;
+  border-radius: 100px;
+  position: absolute;
+  left: 22rem;
+  margin-top: 34rem;
+  
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #5d9c77;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+#Metodologia .play:hover{
+  background: #5d9c77;
+  color: #fff;
+}
+
+#Metodologia .puzzle-btn .puzzle{
+  width: 700px;
+  margin-top: 4rem;
+  margin-right: 10rem;
+}
+
+/* Section Resultados */
+
+#Resultados{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  background: #f1f1f1;
+
+}
+
+#Resultados #container h1{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  color: #fa5a03;
+}
+
+#Resultados #container {
+  margin-left: 16rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+#Resultados #container h3{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+#Resultados #cards{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+margin-left: 22rem;
+gap: .5rem;
+}
+
+#Resultados #cards #card-1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fa5a03;
+  padding: 1.2rem 1rem;
+  width: 100%;
+  border-radius: 25px;
+  color: #fff;
+}
+
+#Resultados #cards #card-1 h1{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 0 1rem;
+}
+
+#Resultados #cards #card-1 h3{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin: 0 0 0 1rem;
+}
+
+#Resultados #cards #card-2{
+  display: flex;
+  background: #fa5a03;
+  padding: 1.2rem 1rem;
+  width: 100%;
+  border-radius: 25px;
+  color: #fff;
+
+}
+
+#Resultados #cards #card-2 img {
+  margin-left:.5rem ;
+}
+
+#Resultados #cards #card-1 img{
+  margin-left: .5rem;
+}
+#Resultados #cards #card-2 h1{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 0 1rem;
+}
+
+#Resultados #cards #card-2 h3{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin: 0 0 0 1rem;
+}
+
+#Resultados #cards #card-3{
+  display: flex;
+  background: #fa5a03;
+  padding: 1rem 1rem;
+  border-radius: 25px;  
+  color: #fff;
+
+}
+
+#Resultados #cards #card-3 img{
+  width: 40px;
+  border-radius: 25px;
+}
+
+#Resultados #cards #card-3 h1{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 0 1rem;
+}
+
+#Resultados #cards #card-3 h3{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin: 0 0 0 1rem;
+}
+
+#Resultados #cards #card-4{
+  display: flex;
+  background: #fa5a03;
+  padding: 1rem 1rem;
+  width: 100%;
+  border-radius: 25px;
+  color: #fff;
+
+}
+
+
+#Resultados #cards #card-3 .text-container{
+margin: .75rem 0 0 1rem ;
+
+}
+
+#Resultados #cards .text-container{
+  margin-left: 1rem;
+}
+#Resultados #cards #card-4 h1{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 0 1rem;
+}
+
+#Resultados  #card-4 h3{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin: 0 0 0 1rem;
+  width: 90%;
+}
+
+/* Section Depoimentos */
+#Depoimentos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #7c2399;
+}
+
+#Depoimentos > h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  color: #fff;
+}
+
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+width: 100%;
+margin: 0 22rem;
+gap: 4rem;
+}
+
+.slide {
+  flex: 0 0 calc(100% / 3.28);
+  min-width: calc(100% / 3.28);
+  text-align: center;
+  padding: 50px 1rem;
+  background-color: #fff;
+  margin: 2rem 0;
+  border-radius: 25px;
+}
+
+.slide h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.slide p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #000;
+  width: 100%;
+  line-height: 27px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  visibility: hidden;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+@media  (max-width: 768px) {
+  .slider {
+    width: 100%;
+    gap: 2rem;
+    margin: 0 2rem;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+      text-align: center;
+      padding: 50px 0;
+      background-color: #7c2399;
+
+
+  }
+
+  .slide.first{
+    margin-left:-1.4rem;
+  }
+  
+  .slide.second{
+    margin-left:-1.9rem ;
+  }
+  
+  .slide.third{
+    margin-left: -1.7rem ;
+  }
+
+  .slide h2{
+    color: #fff
+  }
+
+  .slide p{
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #fa5a03;
+  visibility: visible;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+}
+
+/* Section About */
+
+#About{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#About h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  color: #000;
+}
+
+#About .img-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 0 40rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+#About .img-text img{
+  width: 50%;
+}
+
+#About .img-text .button-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  margin: 0;
+  margin-right: 0;
+  margin-left: 2rem;
+}
+
+#About .img-text .button-text p{
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  width: 46.7%;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+#About .img-text .button-text a{
+  background: none;
+  padding: .90rem 4.25rem;
+  border-radius: 100px;
+  text-align: center;
+  text-decoration: none;
+  color:#5d9c77;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+border: 1px solid #5d9c77;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+#About .img-text .button-text a:hover{
+  background: #5d9c77;
+  color: #fff;
+}
+
+/* Section Forms */
+
+#Forms {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  background-image: url(./Assets/bg-form.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#Forms #form-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  width: 100%;
+  margin-left: 10rem;
+}
+
+#Forms #form-text h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin-top: -2rem;
+}
+
+#Forms #form-text h4{
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+  padding-right:3rem ;
+  width: 56%;
+}
+
+#Forms  .pipedriveWebForms{
+  padding: 3rem 1rem;
+}
+
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.img-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.icons a{
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  background: #4a0650;
+  padding: .25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.icons a:hover{
+  background: #7c2399;
+}
+
+
+
+
+button#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: #fa5a03;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+}
+  
+  
+button#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (max-width:834px)   {
+  body{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  #nav{
+    display: none;
+  }
+
+  #play{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:url(./Assets/bg-mobile.svg) ;
+  }
+
+#play .play a{
+  margin-right: 2rem;
+}
+
+  #play #tc-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 0 2rem;
+  }
+
+  #play #tc-1 h2{
+    font-size: 2.5rem;
+    padding: 0 2rem 0 0;
+    margin-bottom: 12rem;
+    text-align: center; 
+    width: 100%;
+  }
+  #play #tc-1 p{
+    font-size: 1.5rem;
+    text-align: start;
+    width: 100%;
+
+  }
+
+  #play #tc-1 .play{
+    margin-bottom: 4rem;
+  }
+
+  #Metodologia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+
+
+  #Metodologia .puzzle-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #Metodologia .puzzle-btn .puzzle{
+    width: 390px;
+    padding: .25rem;
+    margin: 2rem;
+  }
+
+  #Metodologia .play{
+    position: inherit;
+    margin-top: 2rem;
+  }
+
+  #Metodologia .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 0 1.25rem;
+  }
+
+  #Metodologia h2{
+    margin-bottom: 1rem;
+    font-family: "ROBOTO", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+  }
+  
+  #Metodologia .text .Quebra{
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: .15;
+    width: 100% ;
+    line-height: 27px;
+}
+#Metodologia .text .Metodologia{
+  font-size: 1.075rem;
+  font-family: "Roboto", sans-serif;
+  width: 100% ;
+  margin: 0;
+  font-weight:600 ;
+  line-height: 27px;
+}
+
+
+#Resultados{display: flex;
+  flex-direction: column;
+width: 100%;
+margin: 2rem auto;
+justify-content: center;
+align-items: center;
+}
+
+#Resultados #container{
+  margin: 1rem auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#Resultados #cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+#Resultados #cards #card-3,
+#Resultados #cards #card-2,
+#Resultados #cards #card-1,
+#Resultados #cards #card-4{
+  width: 100%;
+  display: flex;
+}
+
+#Resultados #cards #card-4{
+  margin-bottom: 3rem;
+}
+
+#Resultados #cards #card-3 .text-container,
+#Resultados #cards #card-2 .text-container, 
+#Resultados #cards #card-1 .text-container, 
+#Resultados #cards #card-4 .text-container{
+  margin: 0;
+}
+
+#Resultados #cards img{
+  width: 25px;
+}
+
+#Resultados #cards #card-3 img{
+  width: 30px;
+}
+
+#Resultados #cards #card-4 img{
+  width: 30px;
+}
+
+
+
+#About{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#About .img-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+#About .img-text img{
+  width: 100%;
+}
+
+#About .img-text .button-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+}
+
+#About h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  color: #000;
+  text-align: center;
+}
+
+#About .img-text .button-text p{
+  width: 100%;
+  margin: 0;
+text-align: left;
+line-height: 32px;
+padding: 0 1rem;
+
+}
+ 
+#Forms{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Forms #form-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+
+}
+
+#Forms #form-text h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin-top: -2rem;
+  width: 100%;
+}
+
+#Forms #form-text h4{
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+  width: 100%;
+}
+
+
+button#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  padding: .75rem;
+  font-size: 1.25rem;
+  background-color: #fa5a03;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+}
+  
+  
+button#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+}
+
+
+@media screen and (min-width:800px) and (max-width: 1280px)  {
+  body{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  #nav{
+    display: none;
+  }
+
+  #play{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:url(./Assets/tablet.svg) ;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+  }
+
+#play .play a{
+  margin-right: 2rem;
+}
+
+  #play #tc-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 0 2rem;
+  }
+
+  #play #tc-1 h2{
+    font-size: 2.5rem;
+    padding: 0 2rem 0 0;
+    margin-bottom: 20rem;
+  }
+  #play #tc-1 p{
+    font-size: 2rem;
+    text-align: start;
+    width: 100%;
+
+  }
+
+  #Metodologia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .slider {
+    width: 100%;
+    gap: 2rem;
+    margin: 0 2rem;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+      text-align: center;
+      padding: 50px 0;
+      background-color: #7c2399;
+
+
+  }
+
+  .slide.first{
+    margin-left:-1.4rem;
+  }
+  
+  .slide.second{
+    margin-left:-1.9rem ;
+  }
+  
+  .slide.third{
+    margin-left: -1.7rem ;
+  }
+
+  .slide h2{
+    color: #fff
+  }
+
+  .slide p{
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #fa5a03;
+  visibility: visible;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+  #Metodologia .puzzle-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #Metodologia .puzzle-btn .puzzle{
+    width: 700px;
+    padding: .25rem;
+    margin: 2rem;
+  }
+
+  #Metodologia .play{
+    position: inherit;
+    margin-top: 2rem;
+  }
+
+  #Metodologia .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 0 3rem;
+  }
+
+  #Metodologia h2{
+    margin-bottom: 1rem;
+    font-family: "ROBOTO", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+  }
+  
+  #Metodologia .text .Quebra{
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: .15rem;
+    width: 100% ;
+    line-height: 27px;
+}
+#Metodologia .text .Metodologia{
+  font-size: 1.075rem;
+  font-family: "Roboto", sans-serif;
+  width: 100% ;
+  margin: 0;
+  font-weight:600 ;
+  line-height: 27px;
+}
+
+
+#Resultados{display: flex;
+  flex-direction: column;
+width: 100%;
+margin: 2rem auto;
+justify-content: center;
+align-items: center;
+}
+
+#Resultados #container{
+  margin: 1rem auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#Resultados #cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+#Resultados #cards #card-3,
+#Resultados #cards #card-2,
+#Resultados #cards #card-1,
+#Resultados #cards #card-4{
+  width: 100%;
+  display: flex;
+}
+
+#Resultados #cards #card-4{
+  margin-bottom: 3rem;
+}
+
+#Resultados #cards #card-3 .text-container,
+#Resultados #cards #card-2 .text-container, 
+#Resultados #cards #card-1 .text-container, 
+#Resultados #cards #card-4 .text-container{
+  margin: 0;
+}
+
+#Resultados #cards img{
+  width: 25px;
+}
+
+#Resultados #cards #card-3 img{
+  width: 30px;
+}
+
+#Resultados #cards #card-4 img{
+  width: 30px;
+}
+
+
+
+#About{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#About .img-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+#About .img-text img{
+  width: 50%;
+}
+
+#About .img-text .button-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+}
+
+#About h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  color: #000;
+  text-align: center;
+}
+
+#About .img-text .button-text p{
+  width: 100%;
+  margin: 0;
+text-align: left;
+line-height: 32px;
+font-size: 1.5rem;
+margin-left: 2rem;
+padding: 1rem;
+
+
+
+}
+ 
+#Forms{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Forms #form-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+
+}
+
+#Forms #form-text h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin-top: -2rem;
+  width: 100%;
+  text-align: center;
+}
+
+#Forms #form-text h4{
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  width: 60%;
+  margin-left: 2rem;
+}
+
+.pipedriveWebForms{
+margin-left: 8rem;
+}
+
+button#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  padding: .75rem;
+  font-size: 1.25rem;
+  background-color: #fa5a03;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+}
+  
+  
+button#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+}
+                     
