@@ -167,6 +167,11 @@ body{
   width: 100%;
   justify-content: center;
   align-items: center;
+  
+}
+
+#Metodologia:target{
+scroll-margin-top:5rem ;
 }
 
 #Metodologia .puzzle-btn{
@@ -251,6 +256,9 @@ width: 60%;
 
 }
 
+#Resultados:target{
+scroll-margin-top:5rem ;
+}
 #Resultados #container h1{
   font-family: "Roboto", sans-serif;
   font-weight: 600;
@@ -403,6 +411,11 @@ margin: .75rem 0 0 1rem ;
   background-color: #7c2399;
 }
 
+#Depoimentos:target{
+scroll-margin-top:5rem ;
+
+}
+
 #Depoimentos > h2{
   font-family: "Roboto", sans-serif;
   font-weight: 600;
@@ -547,6 +560,11 @@ gap: 4rem;
   width: 100%;
 }
 
+#About:target{
+scroll-margin-top:5rem ;
+
+}
+
 #About h2{
   font-family: "Roboto", sans-serif;
   font-weight: 600;
@@ -623,7 +641,9 @@ border: 1px solid #5d9c77;
   background-size: cover;
   background-position: center;
 }
-
+#Forms:target{
+scroll-margin-top:5rem ;
+}
 #Forms #form-text{
   display: flex;
   flex-direction: column;
