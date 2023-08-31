@@ -1,0 +1,28 @@
+{
+  "name": "corujo",
+  "version": "1.0.0",
+  "description": "Site técnica de redação",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "técnica",
+    "de",
+    "redação",
+    "corujão",
+    "roberto",
+    "mattos",
+    "stella",
+    "garrafa",
+    "enem",
+    "vestibular",
+    "nota",
+    "1000"
+  ],
+  "author": "Daniel Souza",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.0.2"
+  }
+}
