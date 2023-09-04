@@ -791,6 +791,9 @@ button#scrollToTopBtn.show {
     height: 100vh;
   }
   
+  #menu {
+    display: none;
+  }
   
     #play{
       display: flex;
