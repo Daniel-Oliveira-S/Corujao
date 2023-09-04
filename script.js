@@ -1,5 +1,5 @@
 
-    var contadorElemento = document.getElementById("contador");
+    var contadorElemento = document.getElementById("pontos");
 
     // Definir o valor inicial do contador
     var contador = 890;
@@ -155,6 +155,27 @@ scrollToTopBtn.addEventListener("click", () => {
   }
 });
 
+
+
+const linksNavegacao = document.querySelectorAll('li a');
+
+// Itera sobre os links e adiciona um evento de clique
+linksNavegacao.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Impede o comportamento padrão de seguir o link
+        
+        const targetId = link.getAttribute('href'); // Obtém o ID da seção alvo
+        
+        // Atualiza a URL sem recarregar a página
+        history.pushState(null, null, null);
+        
+        // Rola suavemente para a seção alvo
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 const slider = document.querySelector(".slider");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
@@ -179,9 +200,3 @@ function updateSlider() {
 
 prevButton.addEventListener("click", prevSlide);
 nextButton.addEventListener("click", nextSlide);
-
-
-
-
-
-

@@ -4,427 +4,264 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
-  width: 12px; /* Largura da barra de rolagem */
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Cor de fundo da área da barra de rolagem */
-  border-radius: 8px; /* Borda arredondada da área da barra de rolagem */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #fa5a03; /* Cor do "polegar" da barra de rolagem */
-  border-radius: 8px; /* Borda arredondada do "polegar" */
-}
 
 body{
-  width: 100%;
+  min-width: 768px;
   max-width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-}
+  width: 100%;
+height: 100vh;
+  }
 
+  a{
+    text-decoration: none;
+  }
+
+  ul{
+    list-style: none;
+  }
+  :root{
+      --bg-purple-dark: #4A0751;
+      --bg-green: #5D9C77;
+      --bg-purple: #7C2399;
+      --bg-gray: #f1f1f1;
+      --bg-pink: #AD1BD9;
+      --bg-orange: #FA5A03;
+      --bg-white: #FFFFFF;
+  }
+
+  .btn{
+    padding: 1rem 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    background: var(--bg-green);
+    text-transform: uppercase;
+  }
 /* Header */
-
 #header{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10rem;
   width: 100%;
-  padding: 1rem 0;
+  min-width: 100%;
+  max-width: 100vw;
+  height: 100px;
 
   position: fixed;
-  background: #fff;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
-
+  z-index: 1000;
+  background: var(--bg-white);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
 }
 
-#nav {
+#nav{
+  display: flex;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100vw;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8rem;
+}
+
+
+#menu{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
+  gap: 5rem;
+
 }
 
-#nav #menu{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
-
-#nav #menu li{
-  list-style: none;
-}
-
-#nav #menu a{
-  text-decoration: none;
-  color: #4c0953;
+#menu li a {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
   font-weight: 600;
-  transition: all 0.2s ease-in-out;
-}
-
-#nav #menu a:hover{
-  color: #fa5a03;
-}
-
-#nav .play a{
-  background: #5d9c77;
-  padding: .90rem 4.25rem;
-  border-radius: 100px;
-  
-  text-decoration: none;
-  color:#fff;
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-
+  color: var(--bg-purple-dark);
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
-  
+  font-family: "Roboto", sans-serif;
 }
 
-#nav .play a:hover{
-  background: #7c2399;
+#menu li a:hover{
+  color: var(--bg-orange);
 }
 
-/* Section Play */
+#nav .btn:hover{
+  background: var(--bg-purple);
+}
+
+/* Header end */
+
+/* Hero */
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  min-width: 100%;
+}
 
 #play{
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  background-image: url(./Assets/bg-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-top: 6.5rem;
   height: 100vh;
-  
+  justify-content: start;
+  align-items: center;
+  background: url(./Assets/bg-desktop.svg) no-repeat center center/cover;
 }
 
-#play #tc-1{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  margin-left: 22rem;
+#play-text{
+display: block;
+margin:10rem 0 0 8rem;
+width: 100%;
+line-height: 2rem;
 }
 
-#play #tc-1 h2{
-  font-size: 4rem;
+
+#play-text h2{
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--bg-white);
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  color: #fff;
   margin-bottom: 2rem;
-  margin-top: 9rem;
-  width: 38%;
+  width: 40%;
+  line-height: 48px;
 }
 
-#play #tc-1 p{
+#play-text h3 {
   font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #fff;
-  margin-bottom: 5rem;
-  word-wrap: break-word;
-  width: 35% ;
-}
-
-#play .play a{
-  background: #5d9c77;
-  padding: .90rem 4.25rem;
-  border-radius: 100px;
-  text-align: center;
-  text-decoration: none;
-  color:#fff;
-  text-transform: uppercase;
-  font-size: 1.125rem;
+  color: var(--bg-white);
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-
-  transition: all 0.3s ease-in-out;
-  
+  min-width: 45%;
+  max-width:  100%;
+  width: 45%;
+  margin-bottom: 2rem;
 }
 
-#play .play a:hover{
-  background: #fa5a03;
-}
+/* Way */
 
-/* Section Metodologia */
-
-#Metodologia{
+#way{
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  
+  padding: 8rem 0;
 }
 
-#Metodologia:target{
-scroll-margin-top:5rem ;
+.text-container{
+display: block;
+width: 100%;
+margin-left: 7rem;
 }
-
-#Metodologia .puzzle-btn{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#Metodologia .text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  margin-left: 22rem;
-margin-top: 6rem;
-
-}
-
-
-#Metodologia h2{
-margin-bottom: 2rem;
-font-family: "ROBOTO", sans-serif;
-font-size: 2.5rem;
-font-weight: 700;
-width: 60%;
-}
-
-#Metodologia .text p{
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 1rem;
-  width: 59% ;
+.text-container h4{
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: 27px
-;
-}
-
-#Metodologia .play{
-  margin-top: 2rem;
-}
-
-#Metodologia .play{
-  background: none;
-  border: 1px solid #5d9c77;
-  padding: .90rem 4.25rem;
-  border-radius: 100px;
-  position: absolute;
-  left: 22rem;
-  margin-top: 34rem;
-  
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #5d9c77;
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+}
+
+.text-container h2{
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.text-container p{
   font-size: 1.125rem;
-
-  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  width: 60%;
+  min-width: 40%;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  line-height:27px ;
 }
 
-#Metodologia .play:hover{
-  background: #5d9c77;
-  color: #fff;
+#way img{
+margin-right: 3rem;
 }
+/* way end */
 
-#Metodologia .puzzle-btn .puzzle{
-  width: 700px;
-  margin-top: 4rem;
-  margin-right: 10rem;
-}
-
-/* Section Resultados */
-
-#Resultados{
+/* results */
+#results{
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
-  background: #f1f1f1;
-
+  width: 100%;
+  padding: 8rem 0;
+  background: var(--bg-gray);
 }
 
-#Resultados:target{
-scroll-margin-top:5rem ;
+#points {
+display: block;
+width: 100%;
+margin: 0 7rem;
+font-family: "Roboto", sans-serif;
 }
-#Resultados #container h1{
+
+#points h3{
+  font-size: 1.25rem;
+  font-weight: 400;
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 4rem;
-  color: #fa5a03;
 }
 
-#Resultados #container {
-  margin-left: 16rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+#points h1{
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: .25rem;
+  color: var(--bg-orange);
 }
 
-#Resultados #container h3{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.125rem;
+.cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  min-width: 768px;
+  margin-right: 1rem;
 }
 
-#Resultados #cards{
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-margin-left: 22rem;
-gap: .5rem;
-}
-
-#Resultados #cards #card-1{
+.card{
   display: flex;
-  flex-direction: row;
+  justify-content: start;
   align-items: center;
-  justify-content: flex-start;
-  background: #fa5a03;
-  padding: 1.2rem 1rem;
-  width: 100%;
-  border-radius: 25px;
-  color: #fff;
+  padding: 1rem ;
+  border-radius: 15px;
+  background: var(--bg-orange);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+  gap: 1rem;
 }
 
-#Resultados #cards #card-1 h1{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0 0 0 1rem;
-}
-
-#Resultados #cards #card-1 h3{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  margin: 0 0 0 1rem;
-}
-
-#Resultados #cards #card-2{
-  display: flex;
-  background: #fa5a03;
-  padding: 1.2rem 1rem;
-  width: 100%;
-  border-radius: 25px;
-  color: #fff;
-
-}
-
-#Resultados #cards #card-2 img {
-  margin-left:.5rem ;
-}
-
-#Resultados #cards #card-1 img{
-  margin-left: .5rem;
-}
-#Resultados #cards #card-2 h1{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0 0 0 1rem;
-}
-
-#Resultados #cards #card-2 h3{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  margin: 0 0 0 1rem;
-}
-
-#Resultados #cards #card-3{
-  display: flex;
-  background: #fa5a03;
-  padding: 1rem 1rem;
-  border-radius: 25px;  
-  color: #fff;
-
-}
-
-#Resultados #cards #card-3 img{
-  width: 40px;
-  border-radius: 25px;
-}
-
-#Resultados #cards #card-3 h1{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0 0 0 1rem;
-}
-
-#Resultados #cards #card-3 h3{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  margin: 0 0 0 1rem;
-}
-
-#Resultados #cards #card-4{
-  display: flex;
-  background: #fa5a03;
-  padding: 1rem 1rem;
-  width: 100%;
-  border-radius: 25px;
-  color: #fff;
-
-}
-
-
-#Resultados #cards #card-3 .text-container{
-margin: .75rem 0 0 1rem ;
-
-}
-
-#Resultados #cards .text-container{
-  margin-left: 1rem;
-}
-#Resultados #cards #card-4 h1{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0 0 0 1rem;
-}
-
-#Resultados  #card-4 h3{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  margin: 0 0 0 1rem;
-  width: 90%;
-}
-
-/* Section Depoimentos */
-#Depoimentos {
+.card .js-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  font-family: "roboto", sans-serif;
+  color: var(--bg-white);
+}
+
+/* results end */
+
+/* testimonials */
+#testimonials{
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  background-color: #7c2399;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 0;
+  background: var(--bg-purple);
 }
 
-#Depoimentos:target{
-scroll-margin-top:5rem ;
-
-}
-
-#Depoimentos > h2{
+#testimonial {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  font-size: 2.5rem;
-  margin-top: 3rem;
+  font-size: 2rem;
   color: #fff;
 }
-
-
 .slider-container {
   position: relative;
   overflow: hidden;
@@ -437,7 +274,7 @@ scroll-margin-top:5rem ;
   display: flex;
   transition: transform 0.5s ease-in-out;
 width: 100%;
-margin: 2rem 22rem;
+margin: 2rem 4rem;
 gap: 4rem;
 }
 
@@ -488,7 +325,7 @@ gap: 4rem;
   right: 10px;
 }
 
-@media  (max-width: 768px) {
+@media (max-width: 834px) {
   .slider {
     width: 100%;
     gap: 2rem;
@@ -548,184 +385,131 @@ gap: 4rem;
 }
 
 }
+/* testimonials end */
 
-/* Section About */
-
-#About{
+/* about */
+#about{
   display: flex;
   flex-direction: column;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  width: 100%;
+  padding: 8rem 0;
 }
 
-#About:target{
-scroll-margin-top:5rem ;
+#about h2{
 
-}
-
-#About h2{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
   font-size: 2.5rem;
-  margin-top: 3rem;
-  color: #000;
-}
-
-#About .img-text{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 0 0 40rem;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-#About .img-text img{
-  width: 50%;
-}
-
-#About .img-text .button-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 2rem;
-  margin: 0;
-  margin-right: 0;
-  margin-left: 2rem;
-}
-
-#About .img-text .button-text p{
+  font-weight: 700;
   font-family: "Roboto", sans-serif;
-  color: #000;
-  width: 46.7%;
-  line-height: 27px;
-  font-weight: 400;
+  margin-bottom: 2rem;
 }
 
-#About .img-text .button-text a{
-  background: none;
-  padding: .90rem 4.25rem;
-  border-radius: 100px;
-  text-align: center;
-  text-decoration: none;
-  color:#5d9c77;
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-border: 1px solid #5d9c77;
-  transition: all 0.3s ease-in-out;
-  
-}
-
-#About .img-text .button-text a:hover{
-  background: #5d9c77;
-  color: #fff;
-}
-
-/* Section Forms */
-
-#Forms {
+.btn-text{
   display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-  background-image: url(./Assets/bg-form.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-#Forms:target{
-scroll-margin-top:5rem ;
-}
-#Forms #form-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-  width: 100%;
-  margin-left: 10rem;
-}
-
-#Forms #form-text h2{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  margin-top: -2rem;
-}
-
-#Forms #form-text h4{
-
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #fff;
-  padding-right:3rem ;
-  width: 56%;
-}
-
-#Forms  .pipedriveWebForms{
-  padding: 3rem 1rem;
-}
-
-
-footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.img-icon{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.icons{
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
+  width: 100%;
 }
 
-.icons a{
-  text-decoration: none;
-  outline: none;
-  border: none;
+.btn-text p{
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  width: 40%;
+}
+
+@media (max-width: 1280px) {
+  #about a{
+    margin-left:18rem ;
+    margin-top: 3rem;
+  }
+}
+/* about end */
+
+/* forms */
+
+#forms{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background-image: url(./Assets/bg-form.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-text{
+  display: block;
+  width: 100%;
+  margin-left: 7rem;
+}
+
+.form-text h2{
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 2rem;
+  color: var(--bg-white);
+}
+
+.form-text h3{
   font-size: 1.5rem;
-  color: white;
-  background: #4a0650;
-  padding: .25rem;
-  border-radius: 50%;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 2rem;
+  color: var(--bg-white);
+}
+.pipedriveWebForms{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* forms end */
+
+/* footer */
+footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.icons{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
-  transition: all 0.3s ease-in-out;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.icons a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-purple-dark);
+  border-radius: 50%;
+  padding: .75rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .icons a:hover{
-  background: #7c2399;
+  background: var(--bg-purple);
 }
 
-
+.icons i{
+  font-size: 1.5rem;
+  color: var(--bg-white);
+  text-align: center;
+}
 
 
 button#scrollToTopBtn {
@@ -743,635 +527,497 @@ button#scrollToTopBtn {
   border: none;
   border-radius: 15px;
 }
-  
-  
-button#scrollToTopBtn.show {
-  opacity: 1;
-  visibility: visible;
-}
 
-@media only screen and (max-width:768px)   {
-  body{
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
-  }
-
-  #nav{
-    display: none;
-  }
-
-  #play{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image:url(./Assets/bg-mobile.svg) ;
-  }
-
-#play .play a{
-  margin-right: 2rem;
-}
-
-  #play #tc-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 0 0 2rem;
-  }
-
-  #play #tc-1 h2{
-    font-size: 2.5rem;
-    padding: 0 2rem 0 0;
-    margin-bottom: 19rem;
-    text-align: center; 
-    width: 100%;
-  }
-  #play #tc-1 p{
-    font-size: 1.3rem;
-    text-align: start;
-    width: 100%;
-    padding: 0 2rem 0 1rem;
-
-  }
-
-  #play #tc-1 .play{
-    margin-bottom: 4rem;
-  }
-
-  #Metodologia{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-
-
-  #Metodologia .puzzle-btn{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #Metodologia .puzzle-btn .puzzle{
-    width: 390px;
-    padding: .25rem;
-    margin: 2rem;
-  }
-
-  #Metodologia .play{
-    position: inherit;
-    margin-top: 2rem;
-  }
-
-  #Metodologia .text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0 0 1.25rem;
-  }
-
-  #Metodologia h2{
-    margin-bottom: 1rem;
-    font-family: "ROBOTO", sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    width: 100%;
-  }
-  
-  #Metodologia .text .Quebra{
-    font-size: 1rem;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: .15;
-    width: 100% ;
-    line-height: 27px;
-}
-#Metodologia .text .Metodologia{
-  font-size: 1.075rem;
-  font-family: "Roboto", sans-serif;
-  width: 100% ;
-  margin: 0;
-  font-weight:600 ;
-  line-height: 27px;
-}
-
-
-#Resultados{display: flex;
-  flex-direction: column;
-width: 100%;
-margin: 2rem auto;
-justify-content: center;
-align-items: center;
-}
-
-#Resultados #container{
-  margin: 1rem auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-#Resultados #cards{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 0 auto;
-}
-
-#Resultados #cards #card-3,
-#Resultados #cards #card-2,
-#Resultados #cards #card-1,
-#Resultados #cards #card-4{
-  width: 100%;
-  display: flex;
-}
-
-#Resultados #cards #card-4{
-  margin-bottom: 3rem;
-}
-
-#Resultados #cards #card-3 .text-container,
-#Resultados #cards #card-2 .text-container, 
-#Resultados #cards #card-1 .text-container, 
-#Resultados #cards #card-4 .text-container{
-  margin: 0;
-}
-
-#Resultados #cards img{
-  width: 25px;
-}
-
-#Resultados #cards #card-3 img{
-  width: 30px;
-}
-
-#Resultados #cards #card-4 img{
-  width: 30px;
-}
-
-
-
-#About{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-}
-
-#About .img-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-#About .img-text img{
-  width: 100%;
-}
-
-#About .img-text .button-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-
-}
-
-#About h2{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 2.5rem;
-  margin-top: 3rem;
-  color: #000;
-  text-align: center;
-}
-
-#About .img-text .button-text p{
-  width: 100%;
-  margin: 0;
-text-align: left;
-line-height: 32px;
-padding: 0 1rem;
-
-}
- 
-#Forms{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#Forms #form-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-  width: 100%;
-  margin-left: 2rem;
-
-}
-
-#Forms #form-text h2{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  margin-top: -2rem;
-  width: 100%;
-}
-
-#Forms #form-text h4{
-
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #fff;
-  width: 100%;
-}
-
-
-button#scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  padding: .75rem;
-  font-size: 1.25rem;
-  background-color: #fa5a03;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  border-radius: 15px;
-}
-  
   
 button#scrollToTopBtn.show {
   opacity: 1;
   visibility: visible;
 }
 
-}
 
+@media (min-width: 767px) and (max-width: 834px) {
 
-@media screen and (min-width:800px) and (max-width: 1280px)  {
   body{
     width: 100%;
-    max-width: 100%;
-    height: 100vh;
-  }
-
-  #nav{
-    display: none;
-  }
-
-  #play{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image:url(./Assets/tablet.svg) ;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover  ;
-  }
-
-#play .play a{
-  margin-right: 2rem;
-}
-
-  #play #tc-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 0 0 2rem;
-  }
-
-  #play #tc-1 h2{
-    font-size: 2.5rem;
-    padding: 0 2rem 0 0;
-    margin-bottom: 20rem;
-  }
-  #play #tc-1 p{
-    font-size: 2rem;
-    text-align: start;
-    width: 100%;
-
-  }
-
-  #Metodologia{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .slider {
-    width: 100%;
-    gap: 2rem;
-    margin: 0 2rem;
-  }
-
-  .slide {
-    flex: 0 0 100%;
     min-width: 100%;
+    height: 100vh;
+  }
+
+  #menu{
+    display: none;
+  }
+  
+  
+    #play{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: url(./Assets/bg-mobile.svg) no-repeat center center/cover;
+    }
+  
+    #play-text{
+      display:flex;
+      flex-direction: column;
+      width: 100%;
+      line-height: 2rem;
+   margin: 4rem auto;
+   block-size: 4rem;
+    }
+  
+    #play-text h2{
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--bg-white);
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 32rem;
+      margin-top: -18rem;
+      width: 100%;
+      line-height: 48px;
+      margin-left: auto;
       text-align: center;
-      padding: 50px 0;
-      background-color: #7c2399;
+    }
+  
+    #play-text h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--bg-white);
+      font-family: "Roboto", sans-serif;
+      min-width: 60%;
+      max-width:  100%;
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      text-align: center;
+  
+    }
+  
+    #play #play-text > .btn{
+      margin: 0 auto;
+    }
 
 
-  }
+    #way{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 8rem 0;
+    }
+    .text-container{
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  
+    .text-container h4{
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      width: 100%;	
+      margin: 0 auto;
+    }
+  
+    .text-container h2{
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 2rem;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+      margin: 0 auto;
+  
+    }
+  
+    .text-container p{
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      width: 100%;
+      min-width: 100%;
+      margin-bottom: 3rem;
+      margin-top: 1rem;
+      line-height:32px ;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .text-container .btn{
+      margin: 0 auto;
+    }
+  
+    #way img{
+      margin-right: 0rem;
+      width: 100%;
+      padding: 0rem;
+      margin-top: 5rem;
+    }
+  
+    #results{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 8rem 0;
+      background: var(--bg-gray);
 
-  .slide.first{
-    margin-left:-1.4rem;
+    }
+
+    #points{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .cards{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      margin: 0 auto;
+    }
+  
+    .card{
+      display: flex;
+      align-items: center;
+      padding: 1rem ;
+      border-radius: 15px;
+      background: var(--bg-orange);
+      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+       gap: 1rem;
+       width: 45%; 
+       margin: 0 auto;
+       margin-top: 1rem;
+    }
+  
+  #about{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
   
-  .slide.second{
-    margin-left:-1.9rem ;
-  }
+  #about h2{
   
-  .slide.third{
-    margin-left: -1.7rem ;
-  }
-
-  .slide h2{
-    color: #fff
-  }
-
-  .slide p{
-    width: 80%;
-    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
     text-align: center;
+  
+  }
+  
+  #about .btn-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #about .btn-text img{
+  
+    width: 100%;
     margin: 0 auto;
   }
-
-  .prev-button,
-.next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  cursor: pointer;
-  color: #fa5a03;
-  visibility: visible;
-}
-
-.prev-button {
-  left: 10px;
-}
-
-.next-button {
-  right: 10px;
-}
-
-  #Metodologia .puzzle-btn{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #Metodologia .puzzle-btn .puzzle{
-    width: 700px;
-    padding: .25rem;
-    margin: 2rem;
-  }
-
-  #Metodologia .play{
-    position: inherit;
-    margin-top: 2rem;
-  }
-
-  #Metodologia .text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0 0 3rem;
-  }
-
-  #Metodologia h2{
-    margin-bottom: 1rem;
-    font-family: "ROBOTO", sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    width: 100%;
-  }
   
-  #Metodologia .text .Quebra{
-    font-size: 1.5rem;
+  #about .btn-text p{
+    font-size: 1.125rem;
+    font-weight: 400;
     font-family: "Roboto", sans-serif;
-    margin-bottom: .15rem;
-    width: 100% ;
-    line-height: 27px;
-}
-#Metodologia .text .Metodologia{
-  font-size: 1.075rem;
-  font-family: "Roboto", sans-serif;
-  width: 100% ;
-  margin: 0;
-  font-weight:600 ;
-  line-height: 27px;
-}
-
-
-#Resultados{display: flex;
-  flex-direction: column;
-width: 100%;
-margin: 2rem auto;
-justify-content: center;
-align-items: center;
-}
-
-#Resultados #container{
-  margin: 1rem auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-#Resultados #cards{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 0 auto;
-}
-
-#Resultados #cards #card-3,
-#Resultados #cards #card-2,
-#Resultados #cards #card-1,
-#Resultados #cards #card-4{
-  width: 100%;
-  display: flex;
-}
-
-#Resultados #cards #card-4{
-  margin-bottom: 3rem;
-}
-
-#Resultados #cards #card-3 .text-container,
-#Resultados #cards #card-2 .text-container, 
-#Resultados #cards #card-1 .text-container, 
-#Resultados #cards #card-4 .text-container{
-  margin: 0;
-}
-
-#Resultados #cards img{
-  width: 25px;
-}
-
-#Resultados #cards #card-3 img{
-  width: 30px;
-}
-
-#Resultados #cards #card-4 img{
-  width: 30px;
-}
-
-
-
-#About{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-}
-
-#About .img-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-#About .img-text img{
-  width: 50%;
-}
-
-#About .img-text .button-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-
-}
-
-#About h2{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 2.5rem;
-  margin-top: 3rem;
-  color: #000;
-  text-align: center;
-}
-
-#About .img-text .button-text p{
-  width: 100%;
-  margin: 0;
-text-align: left;
-line-height: 32px;
-font-size: 1.5rem;
-margin-left: 2rem;
-padding: 1rem;
-
-
-
-}
- 
-#Forms{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#Forms #form-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-  width: 100%;
-  margin-left: 2rem;
-
-}
-
-#Forms #form-text h2{
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  margin-top: -2rem;
-  width: 100%;
-  text-align: center;
-}
-
-#Forms #form-text h4{
-
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #fff;
-  text-align: center;
-  width: 60%;
-  margin-left: 2rem;
-}
-
-.pipedriveWebForms{
-margin-left: 8rem;
-}
-
-button#scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  padding: .75rem;
-  font-size: 1.25rem;
-  background-color: #fa5a03;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  border-radius: 15px;
-}
+    line-height: 32px;
+    width: 100%;
+    text-align: left;
+    padding: 1rem .5rem;
+  }
+  #about .btn{
+    margin: 1rem auto;
+  }
+  
+  #forms{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background-image: url(./Assets/bg-form.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #forms .form-text{
+    display: block;
+    width: 100%;
+    margin-left: 0rem;
+  }
+  
+  #forms .form-text h2{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2rem;
+    color: var(--bg-white);
+    text-align: center;
+  }
+  
+  #forms .form-text h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2rem;
+    color: var(--bg-white);
+    text-align: center;
+  }
+  
+  .pipedriveWebForms{
+    padding: 1rem;
+  }
   
   
-button#scrollToTopBtn.show {
-  opacity: 1;
-  visibility: visible;
 }
-}
-                     
+
+@media (max-width:768px)  {
+  body{
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+  }
+  
+  
+    #play{
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: url(./Assets/bg-mobile.svg) no-repeat center center/cover;
+    }
+  
+    #play-text{
+      display: block;
+      width: 100%;
+      line-height: 2rem;
+   margin: 4rem auto;
+   block-size: 4rem;
+   padding: 5rem 0;
+
+    }
+  
+    #play-text h2{
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--bg-white);
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 14rem;
+      margin-top: -12rem;
+      width: 100%;
+      line-height: 48px;
+      margin-left: auto;
+      text-align: center;
+    }
+  
+    #play-text h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--bg-white);
+      font-family: "Roboto", sans-serif;
+      min-width: 80%;
+      max-width:  100%;
+      width: 100%;
+      margin-bottom: 2rem;
+      margin-left: auto;
+      text-align: center;
+  
+    }
+  
+    #play-text .btn{
+  
+      margin-left: 5.5rem;
+      margin-top: 2rem;
+    }
+  
+    #way{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 8rem 0;
+    }
+    .text-container{
+      display: block;
+      width: 100%;
+      margin-left: 0rem;
+    }
+  
+    .text-container h4{
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      width: 100%;	
+      margin: 0 auto;
+    }
+  
+    .text-container h2{
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 2rem;
+      text-align: left;
+      padding: 1rem;
+      width: 100%;
+      margin: 0 auto;
+  
+    }
+  
+    .text-container p{
+      font-size: 1.125rem;
+      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      width: 100%;
+      min-width: 100%;
+      margin-bottom: 3rem;
+      margin-top: 1rem;
+      line-height:27px ;
+      text-align: left;
+      padding: 1rem;
+    }
+  
+    .text-container .btn{
+  
+      margin-left: 5.5rem;
+      margin-top: 2rem;
+    }
+  
+    #way img{
+      margin-right: 0rem;
+      width: 100%;
+      padding: 0rem;
+      margin-top: 5rem;
+    }
+  
+    #results{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 8rem 0;
+      background: var(--bg-gray);
+    }
+    .cards{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      margin: 0 auto;
+    }
+  
+    .card{
+      display: flex;
+      align-items: center;
+      padding: 1rem ;
+      border-radius: 15px;
+      background: var(--bg-orange);
+      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+       gap: 1rem;
+       width: 45%; 
+       margin-top: 1rem;
+    }
+  
+  
+  #about{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #about h2{
+  
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+  
+  }
+  
+  #about .btn-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #about .btn-text img{
+  
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  #about .btn-text p{
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    line-height: 32px;
+    width: 100%;
+    text-align: left;
+    padding: 1rem .5rem;
+  }
+  #about .btn{
+    margin: 1rem auto;
+  }
+  
+  #forms{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background-image: url(./Assets/bg-form.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #forms .form-text{
+    display: block;
+    width: 100%;
+    margin-left: 0rem;
+  }
+  
+  #forms .form-text h2{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2rem;
+    color: var(--bg-white);
+    text-align: center;
+  }
+  
+  #forms .form-text h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2rem;
+    color: var(--bg-white);
+    text-align: center;
+  }
+  
+  .pipedriveWebForms{
+    padding: 1rem;
+  }
+  
+  }
