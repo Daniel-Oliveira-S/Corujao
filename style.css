@@ -794,6 +794,10 @@ button#scrollToTopBtn.show {
   #menu {
     display: none;
   }
+
+  #nav .btn{
+    display: none;
+  }
   
     #play{
       display: flex;
