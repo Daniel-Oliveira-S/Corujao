@@ -882,7 +882,7 @@ button#scrollToTopBtn.show {
       font-weight: 700;
       font-family: "Roboto", sans-serif;
       margin-bottom: 2rem;
-      text-align: left;
+      text-align:center;
       padding: 1rem;
       width: 100%;
       margin: 0 auto;
@@ -922,25 +922,35 @@ button#scrollToTopBtn.show {
       align-items: center;
       width: 100%;
       padding: 8rem 0;
+      margin: 0 auto;
       background: var(--bg-gray);
     }
+    #points{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
     .cards{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 0 auto;
       width: 100%;
+      align-items: center;
+      padding-left: 2rem;
     }
   
     .card{
       display: flex;
       align-items: center;
-      padding: 1rem ;
       border-radius: 15px;
       background: var(--bg-orange);
       box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
        gap: 1rem;
-       width: 45%; 
+       width: 40%; 
+       margin: 0 auto;
        margin-top: 1rem;
     }
   
