@@ -181,6 +181,17 @@ margin-left: 7rem;
   line-height:27px ;
 }
 
+.text-container .btn{
+  background: none;
+  border: 1px solid  var(--bg-green);
+  color: var(--bg-green);
+}
+
+.text-container .btn:hover{
+  background: var(--bg-green);
+  color: var(--bg-white);
+}
+
 #way img{
 margin-right: 3rem;
 }
