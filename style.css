@@ -89,6 +89,10 @@ height: 100vh;
 #menu li a:hover{
   color: var(--bg-orange);
 }
+#nav .btn{
+  background: var(--bg-green);
+  color: var(--bg-white);
+}
 
 #nav .btn:hover{
   background: var(--bg-purple);
@@ -143,6 +147,16 @@ line-height: 2rem;
   margin-bottom: 2rem;
 }
 
+#play-text .btn{
+  background: var(--bg-green);
+  color: var(--bg-white);
+  border: none;
+}
+
+#play-text .btn:hover{
+  background: var(--bg-orange);
+}
+
 /* Way */
 
 #way{
@@ -181,13 +195,13 @@ margin-left: 7rem;
   line-height:27px ;
 }
 
-.text-container .btn{
+ .btn{
   background: none;
   border: 1px solid  var(--bg-green);
   color: var(--bg-green);
 }
 
-.text-container .btn:hover{
+ .btn:hover{
   background: var(--bg-green);
   color: var(--bg-white);
 }

@@ -176,6 +176,27 @@ linksNavegacao.forEach(link => {
     });
 });
 
+const btnLink = document.querySelectorAll('.btn');
+
+// Itera sobre os links e adiciona um evento de clique
+btnLink.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Impede o comportamento padrão de seguir o link
+        
+        const targetId = link.getAttribute('href'); // Obtém o ID da seção alvo
+        
+        // Atualiza a URL sem recarregar a página
+        history.pushState(null, null, null);
+        
+        // Rola suavemente para a seção alvo
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
 const slider = document.querySelector(".slider");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
